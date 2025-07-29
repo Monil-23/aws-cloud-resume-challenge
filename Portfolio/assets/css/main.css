@@ -2688,28 +2688,32 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		-moz-flex-direction: column;
-		-webkit-flex-direction: column;
-		-ms-flex-direction: column;
-		flex-direction: column;
-		-moz-justify-content: space-between;
-		-webkit-justify-content: space-between;
-		-ms-justify-content: space-between;
-		justify-content: space-between;
-		background: #3a8dde;
-		color: #d2f2e9;
-		height: auto;
-		overflow-y: auto;
-		position: fixed;
-		text-align: center;
-		top: 0;
-		width: 23em;
-		right: 0;
-	}
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-transition: -moz-transform 0.5s ease;
+    -webkit-transition: -webkit-transform 0.5s ease;
+    -ms-transition: -ms-transform 0.5s ease;
+    transition: transform 0.5s ease;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 23em;
+    height: 100vh;
+    z-index: 10002;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #3a8dde;
+    color: #d2f2e9;
+
+    overflow-y: auto;
+
+    transform: translateX(23em);
+}
 
 		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
 			color: #ffffff;
@@ -2883,8 +2887,32 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				width: 21em;
-			}
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-transition: -moz-transform 0.5s ease;
+    -webkit-transition: -webkit-transform 0.5s ease;
+    -ms-transition: -ms-transform 0.5s ease;
+    transition: transform 0.5s ease;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 23em;
+    height: 100vh;
+    z-index: 10002;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #3a8dde;
+    color: #d2f2e9;
+
+    overflow-y: auto;
+
+    transform: translateX(23em);
+}
 
 				#header > header {
 					padding: 2em;
@@ -2921,8 +2949,32 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				width: 20em;
-			}
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-transition: -moz-transform 0.5s ease;
+    -webkit-transition: -webkit-transform 0.5s ease;
+    -ms-transition: -ms-transform 0.5s ease;
+    transition: transform 0.5s ease;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 23em;
+    height: 100vh;
+    z-index: 10002;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #3a8dde;
+    color: #d2f2e9;
+
+    overflow-y: auto;
+
+    transform: translateX(23em);
+}
 
 		/* Wrapper */
 
@@ -2966,37 +3018,42 @@ input, select, textarea {
 
 		/* Header */
 
-			#header {
-				-moz-backface-visibility: hidden;
-				-webkit-backface-visibility: hidden;
-				-ms-backface-visibility: hidden;
-				backface-visibility: hidden;
-				-moz-transition: -moz-transform 0.5s ease;
-				-webkit-transition: -webkit-transform 0.5s ease;
-				-ms-transition: -ms-transform 0.5s ease;
-				transition: transform 0.5s ease;
-				display: block;
-				height: 100%;
-				overflow-y: auto;
-				position: fixed;
-				top: 0;
-				width: 23em;
-				z-index: 10002;
-				-moz-transform: translateX(23em);
-				-webkit-transform: translateX(23em);
-				-ms-transform: translateX(23em);
-				transform: translateX(23em);
-				right: 0;
-			}
+		#header {
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-transition: -moz-transform 0.5s ease;
+    -webkit-transition: -webkit-transform 0.5s ease;
+    -ms-transition: -ms-transform 0.5s ease;
+    transition: transform 0.5s ease;
 
-				#header > footer {
-					bottom: auto;
-					left: auto;
-					margin: 0.5em 0 0 0;
-					position: relative;
-					right: auto;
-					top: auto;
-				}
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 23em;
+    height: 100vh;
+    z-index: 10002;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #3a8dde;
+    color: #021812;
+    overflow-y: auto;
+
+    transform: translateX(23em);
+}
+
+				    #header > header,
+					#header > footer {
+					flex: 0 0 auto;      /* keep these at their intrinsic size */
+					}
+
+					#header > nav {
+					flex: 1 1 auto;      /* grow to fill space */
+					overflow-y: auto;    /* scroll when too tall */
+					}
 
 		/* Wrapper */
 
@@ -3098,11 +3155,32 @@ input, select, textarea {
 			}
 
 			body.header-visible #header {
-				-moz-transform: translateX(0);
-				-webkit-transform: translateX(0);
-				-ms-transform: translateX(0);
-				transform: translateX(0);
-			}
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-transition: -moz-transform 0.5s ease;
+    -webkit-transition: -webkit-transform 0.5s ease;
+    -ms-transition: -ms-transform 0.5s ease;
+    transition: transform 0.5s ease;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 23em;
+    height: 100vh;
+    z-index: 10002;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #3a8dde;
+    color: #d2f2e9;
+
+    overflow-y: auto;
+
+    transform: translateX(23em);
+}
 
 	}
 
@@ -3177,14 +3255,32 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				width: 17em;
-				-moz-transform: translateX(17em);
-				-webkit-transform: translateX(17em);
-				-ms-transform: translateX(17em);
-				transform: translateX(17em);
-				right: 0;
-			}
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-transition: -moz-transform 0.5s ease;
+    -webkit-transition: -webkit-transform 0.5s ease;
+    -ms-transition: -ms-transform 0.5s ease;
+    transition: transform 0.5s ease;
 
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 23em;
+    height: 100vh;
+    z-index: 10002;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #3a8dde;
+    color: #d2f2e9;
+
+    overflow-y: auto;
+
+    transform: translateX(23em);
+}
 				#header > header {
 					padding: 2em;
 				}
@@ -3321,4 +3417,53 @@ input, select, textarea {
 		margin: 0 auto;
 	  }
 			
+
+
+	  /* === Force header panel to fill the viewport === */
+#header{
+    position:fixed;
+    top:0;
+    right:0;               /* keep it on the right */
+    width:23em;            /* sidebar width on desktops */
+    /* max-width:100%;         never overflow on very small devices */
+    height:100vh;          /* full viewport height */
+    display:flex;          /* stack sections vertically */
+    flex-direction:column;
+    overflow-y:auto;       /* scroll if the content is taller than the screen */
+    transform:none !important;   /* disables the slide‑off‑screen translation */
+}
+
+/* === Vertically center everything inside the blue sidebar === */
+#header{
+    /* main axis = vertical because flex‑direction: column */
+    justify-content:center;        /* center the avatar, nav, and icons stack */
+}
+
+/* keep each section’s natural height but stop the nav from stretching */
+#header > header,
+#header > nav,
+#header > footer{
+    flex:0 0 auto;                 /* shrink‑to‑content so centering works */
+    width:100%;                    /* still let the white dividers span edge‑to‑edge */
+    text-align:center;             /* keep text centred */
+}
+
+/* when content is taller than the viewport, let the sidebar scroll instead of overflowing */
+@media (max-height: 700px){        /* tweak the breakpoint to taste */
+    #header{
+        justify-content:flex-start;/* fall back to top‑aligned */
+    }
+    #header > nav{
+        flex:1 1 auto;             /* grow + scroll so links stay accessible */
+        overflow-y:auto;
+    }
+}
+
+
+
+
+
+
+
+
 
