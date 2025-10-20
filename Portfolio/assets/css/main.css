@@ -2712,7 +2712,7 @@ input, select, textarea {
 
     overflow-y: auto;
 
-    transform: translateX(23em);
+    transform: translateX(0);
 }
 
 		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
@@ -2741,6 +2741,7 @@ input, select, textarea {
 			-ms-flex-shrink: 0;
 			flex-shrink: 0;
 			padding: 3em;
+			text-align: center;
 		}
 
 			#header > header .avatar {
@@ -2769,6 +2770,7 @@ input, select, textarea {
 			left: 0;
 			padding: 2em;
 			width: 100%;
+			text-align: center;
 		}
 
 			#header > footer .icons {
@@ -2784,6 +2786,7 @@ input, select, textarea {
 			-webkit-flex-grow: 1;
 			-ms-flex-grow: 1;
 			flex-grow: 1;
+			text-align: center;
 		}
 
 			#header > nav ul {
@@ -2911,7 +2914,7 @@ input, select, textarea {
 
     overflow-y: auto;
 
-    transform: translateX(23em);
+    transform: translateX(0);
 }
 
 				#header > header {
@@ -2973,7 +2976,7 @@ input, select, textarea {
 
     overflow-y: auto;
 
-    transform: translateX(23em);
+    transform: translateX(0);
 }
 
 		/* Wrapper */
@@ -3067,6 +3070,7 @@ input, select, textarea {
 				-ms-transition: -ms-transform 0.5s ease;
 				transition: transform 0.5s ease;
 				padding: 44px 0 1px 0;
+				padding-right: 0;
 			}
 
 		/* Header Panel */
@@ -3179,7 +3183,7 @@ input, select, textarea {
 
     overflow-y: auto;
 
-    transform: translateX(23em);
+    transform: translateX(0);
 }
 
 	}
@@ -3268,6 +3272,7 @@ input, select, textarea {
     top: 0;
     right: 0;
     width: 23em;
+    max-width: 100vw;
     height: 100vh;
     z-index: 10002;
 
@@ -3339,10 +3344,10 @@ input, select, textarea {
 				}
 
 			body.header-visible #wrapper, body.header-visible #titleBar {
-				-moz-transform: translateX(-17em);
-				-webkit-transform: translateX(-17em);
-				-ms-transform: translateX(-17em);
-				transform: translateX(-17em);
+				-moz-transform: translateX(-23em);
+				-webkit-transform: translateX(-23em);
+				-ms-transform: translateX(-23em);
+				transform: translateX(-23em);
 			}
 
 	}
@@ -3419,45 +3424,6 @@ input, select, textarea {
 			
 
 
-	  /* === Force header panel to fill the viewport === */
-#header{
-    position:fixed;
-    top:0;
-    right:0;               /* keep it on the right */
-    width:23em;            /* sidebar width on desktops */
-    /* max-width:100%;         never overflow on very small devices */
-    height:100vh;          /* full viewport height */
-    display:flex;          /* stack sections vertically */
-    flex-direction:column;
-    overflow-y:auto;       /* scroll if the content is taller than the screen */
-    transform:none !important;   /* disables the slide‑off‑screen translation */
-}
-
-/* === Vertically center everything inside the blue sidebar === */
-#header{
-    /* main axis = vertical because flex‑direction: column */
-    justify-content:center;        /* center the avatar, nav, and icons stack */
-}
-
-/* keep each section’s natural height but stop the nav from stretching */
-#header > header,
-#header > nav,
-#header > footer{
-    flex:0 0 auto;                 /* shrink‑to‑content so centering works */
-    width:100%;                    /* still let the white dividers span edge‑to‑edge */
-    text-align:center;             /* keep text centred */
-}
-
-/* when content is taller than the viewport, let the sidebar scroll instead of overflowing */
-@media (max-height: 700px){        /* tweak the breakpoint to taste */
-    #header{
-        justify-content:flex-start;/* fall back to top‑aligned */
-    }
-    #header > nav{
-        flex:1 1 auto;             /* grow + scroll so links stay accessible */
-        overflow-y:auto;
-    }
-}
 
 
 
